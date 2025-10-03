@@ -1,0 +1,6 @@
+-- added asyncawait to handle operations creating a asynchronous intrustions to make a 🇱🇮
+-- created a server.js to handle requests
+-- using node callbackVersion.js in termnial to excute the code
+-- fixed package.json by installing npn in terminal
+ -- use npm install for installing packages
+ -- server.js been updated to where it runs thru a local host machine

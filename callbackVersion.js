@@ -7,7 +7,7 @@ function mowLawn (callback) {
 
 function weedEater (callback) {
   console.log('Weed eating the lawn');
-  setTimeout(() => { 1500 });
+  setTimeout(() => { 20000 });
   callback();
 }
 
