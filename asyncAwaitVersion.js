@@ -49,27 +49,28 @@ function waterGarden(name, callback) {
   }, 500);
 }
 
-async function doSummerChoresAsync(name) {
-  console.log(`${name} is starting their chores.`);
-  try {{
-    await mowYard(name, () => Promise.resolve());
-    await weedEat(name, () => Promise.resolve());
-    await trimHedges(name, () => Promise.resolve());
-    await collectWood(name, () => Promise.resolve());
-    await waterGarden(name, () => Promise.resolve());
-    console.log(`${name} finished all their chores!`);
-  }
-  console.log(`${name} fell asleep during their chores.`);
-  }
-  catch (error) {
-    console.log(`\nChores got interrupted${name} fell asleep.`);
-  }
+async function doSummerChores() {
 
-function doSummerChores(name) {
-    mowYard(name, () => {
-      console.log(`${name} finished all their chores!`);
-    });
-}
+  try {
+     const mowYardPromise = await mowYard();
+  console.log(mowYard);
 
-doSummerChores("Luna");
+  const weedEat = await weedEat();
+  console.log(weedEat);
+  
+const trimHedges = await trimHedges();
+  console.log(trimHedges);
+
+  const collectWood = await collectWood();
+  console.log(collectWood);
+
+  const waterGarden = await waterGarden();
+  console.log(waterGarden);
+  } catch (error) {
+    
+    console.log('Chore interrupted:', error);
+  }
+ 
+
+  console.log('All done with the summer chores!');
 }
