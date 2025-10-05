@@ -49,6 +49,22 @@ function waterGarden(name, callback) {
   }, 500);
 }
 
+async function doSummerChoresAsync(name) {
+  console.log(`${name} is starting their chores.`);
+  try {{
+    await mowYard(name, () => Promise.resolve());
+    await weedEat(name, () => Promise.resolve());
+    await trimHedges(name, () => Promise.resolve());
+    await collectWood(name, () => Promise.resolve());
+    await waterGarden(name, () => Promise.resolve());
+    console.log(`${name} finished all their chores!`);
+  }
+  console.log(`${name} fell asleep during their chores.`);
+  }
+  catch (error) {
+    console.log(`\nChores got interrupted${name} fell asleep.`);
+  }
+
 function doSummerChores(name) {
     mowYard(name, () => {
       console.log(`${name} finished all their chores!`);
@@ -56,3 +72,4 @@ function doSummerChores(name) {
 }
 
 doSummerChores("Luna");
+}
