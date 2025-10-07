@@ -15,7 +15,7 @@ function doSummerChores(name) {
 
 function mowLawn(name, callback) {
   console.log(`${name} is mowing the lawn`);
-  const fellAsleep = Math.random() > 0.7;
+  const fellAsleep = Math.random() > 0.7; // 30% chance of falling asleep
 
   setTimeout(() => {
     if (fellAsleep) {
