@@ -1,6 +1,6 @@
 function doSummerChores(name) {
   mowLawn(name, () => {
-    weedEater(name, () => {
+    weedEatLawn(name, () => {
       trimHedges(name, () => {
         collectWood(name, () => {
           waterGarden(name, () => {
@@ -14,10 +14,10 @@ function doSummerChores(name) {
 
 function mowLawn(name, callback) {
   console.log(`${name} is mowing the lawn`);
-  const fellAsleep = Math.random() > 0.7; // 30% chance of falling asleep
+  const asleep = fellAsleep(); 
 
   setTimeout(() => {
-    if (fellAsleep) {
+    if (asleep) {
       console.log(`${name} fell asleep while mowing the lawn `); 
     } else {
       console.log(`${name} successfully mowed the lawn `);
@@ -26,26 +26,26 @@ function mowLawn(name, callback) {
   }, 2000);
 }
 
-function weedEater(name, callback) {
+function weedEat(name, callback) {
   console.log(`${name} is weed eating the lawn`);
-  const fellAsleep = Math.random() > 0.7;
+  const asleep = fellAsleep();
 
   setTimeout(() => {
-    if (fellAsleep) {
+    if (asleep) {
       console.log(`${name} fell asleep while weed eating the lawn `);
     } else {
       console.log(`${name} successfully weed ate the lawn `);
       callback(); 
     }
-  }, 2000);
+  }, 2500);
 }
 
 function trimHedges(name, callback) {
   console.log(`${name} is trimming the hedges`);
-  const fellAsleep = Math.random() > 0.7;
+  const asleep = fellAsleep();
 
   setTimeout(() => {
-    if (fellAsleep) {
+    if (asleep) {
       console.log(`${name} fell asleep while trimming hedges `);
     } else {
       console.log(`${name} successfully trimmed the hedges `);
@@ -56,10 +56,10 @@ function trimHedges(name, callback) {
 
 function collectWood(name, callback) {
   console.log(`${name} is collecting the wood`);
-  const fellAsleep = Math.random() > 0.7;
+  const asleep = fellAsleep();
 
   setTimeout(() => {
-    if (fellAsleep) {
+    if (asleep) {
       console.log(`${name} fell asleep while collecting wood `); 
     } else {
       console.log(`${name} successfully collected wood `);
@@ -70,10 +70,10 @@ function collectWood(name, callback) {
 
 function waterGarden(name, callback) {
   console.log(`${name} is watering the garden`);
-  const fellAsleep = Math.random() > 0.7;
+  const asleep = fellAsleep();
 
   setTimeout(() => {
-    if (fellAsleep) {
+    if (asleep) {
       console.log(`${name} fell asleep while watering garden `);
     } else {
       console.log(`${name} successfully watered garden `);

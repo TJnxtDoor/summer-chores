@@ -6,13 +6,13 @@ function mowYard(name) {
   });
 }
 
-function weedEat(name) {
-  return new Promise((resolve, reject) => {
-   setTimeout(() => { 
-    resolve(`${name} finished weed eating the yard`);
-  }, 2000);
-  });
-}
+// function weedEat(name) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve(`${name} finished weed eating the yard`);
+//     }, 2500);
+//   });
+// }
 
 function trimHedges(name) {
   return new Promise((resolve, reject) => {
@@ -21,6 +21,8 @@ function trimHedges(name) {
   }, 7000);
   });
 }
+
+
 
 function collectWood(name) {
   return new Promise((resolve, reject) => {
