@@ -1,5 +1,4 @@
 function doSummerChores(name) {
-
   mowLawn(name, () => {
     weedEater(name, () => {
       trimHedges(name, () => {
@@ -82,5 +81,5 @@ function waterGarden(name, callback) {
     }
   }, 500);
 }
-
+// call the function
 doSummerChores("Luna");
